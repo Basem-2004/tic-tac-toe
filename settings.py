@@ -3,7 +3,7 @@ SIZE = (400, 450)
 # text size
 FONT = "Helvetica"
 TEXT_SIZE = 45
-MESSEGE_TEXT_SIZE = 12
+MESSAGE_TEXT_SIZE = 12
 
 TEXT_COLOR = "white"
 
