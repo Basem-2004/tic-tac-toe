@@ -151,11 +151,11 @@ class MessageWindow(ctk.CTkToplevel):
         self.message = message
         self.turn = turn
         
-        messege_label = ctk.CTkLabel(self, 
+        message_label = ctk.CTkLabel(self, 
                                  text= f"X {self.message}" if self.turn.get() == False else f"O {self.message}", 
                                  font= ("Helvetica", 16, "bold"))
     
-        messege_button = ctk.CTkButton(self, 
+        message_button = ctk.CTkButton(self, 
                                    text= "OK", 
                                    fg_color= "#0006b3", 
                                    hover_color= "#00059c", 
@@ -164,11 +164,11 @@ class MessageWindow(ctk.CTkToplevel):
                                    command= lambda: parent.restart(self))
     
         if self.message == "Winner:":
-            messege_label.configure(text= f"{self.message} Player 1 (X)" if self.turn.get() == False else f"{self.message} Player 2 (O)", text_color= "#33b300")
+            message_label.configure(text= f"{self.message} Player 1 (X)" if self.turn.get() == False else f"{self.message} Player 2 (O)", text_color= "#33b300")
         else: #for draw
-            messege_label.configure(text= self.message, text_color= "white")
+            message_label.configure(text= self.message, text_color= "white")
         
-        messege_label.place(relx= 0.5, rely= 0.4, anchor= "center")
-        messege_button.place(relx= 0.5, rely= 0.7, anchor= "center")    
+        message_label.place(relx= 0.5, rely= 0.4, anchor= "center")
+        message_button.place(relx= 0.5, rely= 0.7, anchor= "center")    
 
 App()
